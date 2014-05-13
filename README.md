@@ -1,6 +1,6 @@
 # RubyGems.org: Insert README
 
-This is an userscript that inserts README in GitHub repository to https?://rubygems.org/gems/{gem_name}.
+This is a userscript that inserts README in GitHub repository to https?://rubygems.org/gems/{gem_name}.
 
 ## How to Compile
 
@@ -12,7 +12,7 @@ $ npm install
 $ gulp scripts
 ```
 
-An userscript file will be written to `./dist`.
+A userscript file will be written to `./dist`.
 
 ## Syntax Highlighting
 
