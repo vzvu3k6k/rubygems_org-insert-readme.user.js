@@ -30,7 +30,7 @@ gulp.task('styles', function () {
 
 gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['scripts']);
-  gulp.watch(paths.styles, ['styles', 'scripts']);
+  gulp.watch(paths.styles, ['scripts']);
 });
 
 gulp.task('default', ['scripts', 'watch']);
