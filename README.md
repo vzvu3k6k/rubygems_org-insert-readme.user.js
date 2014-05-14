@@ -16,6 +16,6 @@ A userscript file will be written to `./dist`.
 
 ## Syntax Highlighting
 
-As code blocks in README is highlighed with Pygments, you can enable syntax highlighing by adding an userstyle using Pygments CSS classes.
+As code blocks in README is highlighed with Pygments, you can enable syntax highlighing by adding a userstyle using Pygments CSS classes.
 
 * [RailsCasts style](./userstyles/railscast.user.css)
