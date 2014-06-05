@@ -45,7 +45,7 @@ if(repo){
 
         Array.prototype.forEach.call(elements, function(element){
           var url = element.getAttribute(attr);
-          if(!/^\w+:\/\//.exec(url)){
+          if(!/^(\w+:)?\/\//.exec(url)){
             url = 'https://github.com/' + repo[1] + '/' + repo[2] + path + url.replace(/^([^/])/, '/$1');
             element.setAttribute(attr, url);
           }
