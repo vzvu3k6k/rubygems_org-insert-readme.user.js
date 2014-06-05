@@ -38,7 +38,7 @@ if(repo){
         .insertAdjacentHTML('afterend', '<div class="border readme_box">' + result.responseText + '</div>');
 
       // Fix relative URLs
-      var readmeBox = document.querySelector('.readme_box')
+      var readmeBox = document.querySelector('.readme_box');
       [['a', 'href', '/blob/master'], ['img', 'src', '/raw/master']].forEach(function(i){
         var selector = i[0], attr = i[1], path = i[2];
         var elements = readmeBox.querySelectorAll(selector);
