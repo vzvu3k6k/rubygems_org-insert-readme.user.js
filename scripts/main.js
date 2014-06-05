@@ -36,6 +36,20 @@ if(repo){
       GM_addStyle("@@include('../tmp/style.css')");
       document.querySelector('.border:last-of-type')
         .insertAdjacentHTML('afterend', '<div class="border readme_box">' + result.responseText + '</div>');
+
+      // Fix relative URLs
+      [['a', 'href', '/blob/master'], ['img', 'src', '/raw/master']].forEach(function(i){
+        var selector = i[0], attr = i[1], path = i[2];
+        var elements = document.querySelectorAll('.readme_box ' + selector);
+
+        Array.prototype.forEach.call(elements, function(element){
+          var url = element.getAttribute(attr);
+          if(!/^\w+:\/\//.exec(url)){
+            url = 'https://github.com/' + repo[1] + '/' + repo[2] + path + url.replace(/^([^/])/, '/$1');
+            element.setAttribute(attr, url);
+          }
+        });
+      });
     }
   });
 }
