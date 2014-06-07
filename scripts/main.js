@@ -12,7 +12,7 @@
 var a = document.querySelectorAll('.meta .links a');
 var repo;
 for(var i = 0; i < a.length; i++)
-  if((repo = a[i].href.match(/https?:\/\/github\.com\/([^/]+)\/([^/]+)/)))
+  if((repo = a[i].href.match(/https?:\/\/(www\.)?github\.com\/([^/]+)\/([^/]+)/)))
     break;
 
 if(repo){
