@@ -7,6 +7,10 @@
 // @match          https://rubygems.org/gems/*
 // @namespace      {{namespace}}
 // @license        {{license}}
+// @grant          GM_info
+// @grant          GM_getMetadata
+// @grant          GM_addStyle
+// @grant          GM_xmlhttpRequest
 // ==/UserScript==
 
 var a = document.querySelectorAll('.meta .links a');
