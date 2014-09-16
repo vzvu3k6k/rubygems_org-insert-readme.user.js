@@ -18,11 +18,13 @@ for(var i = 0; i < a.length; i++)
 if(repo){
   if(typeof GM_info == 'undefined'){
     function GM_info(){
-      var script = {};
-      ['name', 'version'].forEach(function(key){
-        if(GM_getMetadata(key))
-          script[key] = GM_getMetadata(key)[0];
-      });
+      if(typeof GM_getMetadata == 'function'){
+        var script = {};
+        ['name', 'version'].forEach(function(key){
+          if(GM_getMetadata(key))
+            script[key] = GM_getMetadata(key)[0];
+        });
+      }
       return {script: script};
     }
   }
