@@ -13,7 +13,7 @@
 // @grant          GM_xmlhttpRequest
 // ==/UserScript==
 
-var a = document.querySelectorAll('.meta .links a');
+var a = document.querySelectorAll('.gem__aside a');
 var repo;
 for(var i = 0; i < a.length; i++)
   if(/^(?:www\.)?github\.com$/.test(a[i].host) &&
@@ -41,8 +41,8 @@ if(repo){
     headers: {'User-Agent': userAgent, 'Accept': 'application/vnd.github.v3.html+json'},
     onload: function(result){
       GM_addStyle("@@include('../tmp/style.css')");
-      document.querySelector('.border:last-of-type')
-        .insertAdjacentHTML('afterend', '<div class="border readme_box">' + result.responseText + '</div>');
+      document.querySelector('main .l-overflow')
+        .insertAdjacentHTML('beforeend', '<div class="l-colspan--l readme_box">' + result.responseText + '</div>');
 
       // Fix relative URLs
       var readmeBox = document.querySelector('.readme_box');
