@@ -1,76 +1,43 @@
-.readme_box {
-    /* This style is for error message.
-       If readme is not found, `div#readme` is not created,
-       and error message goes in `div.readme_box`. */
-    color: #000;
-}
-
 #readme {
-    background-color: #ECE5D6;
-    padding: 3em;
+    border-top: thin solid #c1c4ca;
+    padding-top: 48px;
+
+    h1, h2, h3, h4, h5, h6, p, pre, ul, ol, dl {
+        margin-top: 18px;
+    }
 
     h1, h2, h3, h4, h5, h6 {
-        color: #300000;
-        margin: 1em 0 0.3em;
-        &:first-child {
-            margin-top: 0; /* Because `div#readme` has padding... */
-        }
-    }
-    h1 { font-size: 2.5em; }
-    h2 { font-size: 2.0em; }
-    h3 { font-size: 1.8em; }
-    h4 { font-size: 1.6em; }
-    h5 { font-size: 1.3em; }
-    h6 { font-size: 1.0em; }
-
-    p, ol, ul {
-        font-size: 1rem;
+        color: #333;
     }
 
-    p, pre {
-        margin: 0 0 0.8em 0;
+    ul > li {
+        list-style: disc inside none;
     }
 
-    li {
-        line-height: 1.5;
-        p {
-            margin: 0;
-        }
-    }
-
-    ol, ul {
-        margin: 0 0 0.8em 3em;
-    }
-
-    ol {
-        list-style: decimal outside none;
-    }
-
-    ul {
-        list-style: disc outside none;
-    }
-
-    a {
-        color: #a00;
+    ol > li {
+        list-style: decimal inside none;
     }
 
     pre {
-        font-size: 0.8rem;
-        line-height: normal;
+        overflow: auto;
+        color: #fff;
+        padding: 10px;
     }
 
-    *:not(pre) > code {
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 2px;
-        color: inherit;
-        padding: 2px;
-    }
+    /* hover color and transition is based on the rules for
+       `a.t-list__item`. */
+    a {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #000;
+        transition-duration: 0.25s;
+        transition-property: color;
 
-    .highlight {
-        border-radius: 10px;
-        pre {
-            text-shadow: none;
-            padding: 0.8rem;
+        &:visited {
+            color: #666;
+        }
+        &:hover {
+            color: #fa3c29;
         }
     }
 }
