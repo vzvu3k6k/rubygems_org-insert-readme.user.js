@@ -20,5 +20,6 @@
   "userscript": {
     "name": "RubyGems.org: Insert README",
     "namespace": "http://vzvu3k6k.tk/"
-  }
+  },
+  "private": true
 }
