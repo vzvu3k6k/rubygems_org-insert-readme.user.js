@@ -13,6 +13,7 @@
 // @grant          GM_xmlhttpRequest
 // ==/UserScript==
 
+// Find github repository from links
 var a = document.querySelectorAll('.gem__aside a');
 var repo;
 for(var i = 0; i < a.length; i++)
