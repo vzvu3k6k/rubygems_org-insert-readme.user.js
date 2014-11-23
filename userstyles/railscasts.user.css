@@ -1,0 +1,35 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+/*
+  This stylesheet is based on by pygments-style-railscasts 0.3,
+  which is a pygments port of RailsCast theme.
+    * https://pypi.python.org/pypi/pygments-style-railscasts
+    * https://github.com/DrMegahertz/pygments-style-railscasts
+
+  RailsCasts TextMate Theme
+    http://railscasts.com/about
+
+  Railscasts theme is based on idleFingers TextMate Theme.
+    http://idlefingers.co.uk/
+*/
+
+@-moz-document domain("rubygems.org") {
+    .highlight pre {
+        background-color: #232323;
+    }
+
+    .highlight .pl-c   { color: #bc9458; font-style: italic }
+    .highlight .pl-c1  { color: #a5c261 }
+    .highlight .pl-cce { color: #519f50 }
+    .highlight .pl-en  { color: #ffc66d }
+    .highlight .pl-k   { color: #cc7833 }
+    .highlight .pl-pse { color: #a5c261 }
+    .highlight .pl-pds { color: #a5c261 }
+    .highlight .pl-s1  { color: #a5c261 }
+    .highlight .pl-s2  { color: #ffffff }
+    .highlight .pl-s3  { color: #6d9cbe }
+    .highlight .pl-sr  { color: #a5c261 }
+    .highlight .pl-v   { color: #ffffff }
+    .highlight .pl-vo  { color: #ffffff }
+    .highlight .pl-vpf { color: #ffffff }
+}
