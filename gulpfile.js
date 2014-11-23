@@ -16,6 +16,9 @@ gulp.task('scripts', ['styles'], function() {
     .pipe(replace(/^(\/\/ @\w+\s+){{(\w+)}}$/mg, function(substr, pre, key){
       return pre + (packageInfo.userscript[key] || packageInfo[key] || "");
     }))
+    .pipe(replace(/USER_AGENT/g, function(){
+      return "'" + packageInfo.userscript.name + ' (' + packageInfo.version + ')' + "'";
+    }))
     .pipe(fileInclude({basepath: '@file'}))
     .pipe(concat(slugify(packageInfo.name) + '.user.js'))
     .pipe(gulp.dest('dist/'));
