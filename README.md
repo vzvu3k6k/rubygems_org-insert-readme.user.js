@@ -7,9 +7,8 @@ This is a userscript that inserts README in GitHub repository to https?://rubyge
 Requires Node.js.
 
 ```
-$ npm install gulp
 $ npm install
-$ gulp scripts
+$ npm run build
 ```
 
 A userscript file will be written to `./dist`.
