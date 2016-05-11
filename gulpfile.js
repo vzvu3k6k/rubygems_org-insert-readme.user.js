@@ -26,7 +26,7 @@ gulp.task('scripts', ['styles'], function() {
 
 gulp.task('styles', function () {
   return gulp.src(paths.styles)
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({outputStyle: 'expanded'}))
     .pipe(concat('style.css', {newLine: ''}))
     .pipe(gulp.dest('tmp/'));
 });

@@ -25,7 +25,9 @@ if(repo){
     url: 'https://api.github.com/repos/' + repo[1] + '/' + repo[2] + '/readme',
     headers: {'User-Agent': USER_AGENT, 'Accept': 'application/vnd.github.v3.html+json'},
     onload: function(result){
-      GM_addStyle("@@include('../tmp/style.css')");
+      GM_addStyle(`
+@@include('../tmp/style.css')
+`);
       document.querySelector('main .l-overflow')
         .insertAdjacentHTML('beforeend', '<div class="l-colspan--l readme_box">' + result.responseText + '</div>');
 
