@@ -24,6 +24,10 @@
         padding: 10px;
     }
 
+    .anchor[aria-hidden="true"] {
+        display: none;
+    }
+
     /* hover color and transition is based on the rules for
        `a.t-list__item`. */
     a {
