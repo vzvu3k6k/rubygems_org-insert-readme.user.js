@@ -2,12 +2,21 @@
     border-top: thin solid #c1c4ca;
     padding-top: 48px;
 
+    h1, h2, h3, h4, h5, h6 {
+        color: #333;
+    }
+
     h1, h2, h3, h4, h5, h6, p, pre, ul, ol, dl {
         margin-top: 18px;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-        color: #333;
+    ol, ul {
+        margin-left: 18px;
+    }
+
+
+    li > ol, li > ul {
+        margin-top: 0;
     }
 
     ul > li {
